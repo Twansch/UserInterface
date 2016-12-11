@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabCustomerUI">
      <attribute name="title">
@@ -276,17 +276,17 @@
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="btAddGarmentTest">
+      <widget class="QLabel" name="lblAdminInfo">
        <property name="geometry">
         <rect>
-         <x>410</x>
-         <y>150</y>
-         <width>101</width>
-         <height>31</height>
+         <x>367</x>
+         <y>30</y>
+         <width>321</width>
+         <height>201</height>
         </rect>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>TextLabel</string>
        </property>
       </widget>
      </widget>
@@ -314,6 +314,19 @@
       </property>
       <property name="text">
        <string>Alarm! Stop Everything</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btAddGarmentTest">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>250</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
       </property>
      </widget>
     </widget>

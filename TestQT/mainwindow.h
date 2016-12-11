@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QModelIndex>
 #include <iostream>
+#include "Garment.h"
 
 
 namespace Ui {
@@ -37,6 +38,8 @@ private slots:
     void addGarmentToListWidget(QString garmentId);
 
     void on_listWidgetGarments_clicked(const QModelIndex &index);
+
+    Garment findObject(int idName);
 
 private:
     Ui::MainWindow *ui;

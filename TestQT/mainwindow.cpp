@@ -3,27 +3,36 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include "Communication.h"
+#include "Garment.h"
 #include "string.h"
 
 Communication communication;
+std::vector Garments<Garment> ;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-
     ui->setupUi(this);
+
+    QMessageBox msgBox;
+
+    if(communication.Connect())
+    {
+        msgBox.setText("Connected.");
+        msgBox.exec();
+    }
+    else
+    {
+        msgBox.setText("Connection failed.");
+        msgBox.exec();
+    }
+
 }
 
 MainWindow::~MainWindow()
 {
+    communication.Close();
     delete ui;
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    QMessageBox msgBox;
-    msgBox.setText("Chris is onderweg");
-    msgBox.exec();
 }
 
 void MainWindow::on_pushButton_clicked()
@@ -43,23 +52,6 @@ void MainWindow::on_tabUI_tabBarClicked(int index)
     //{textLabel->setText(text);}
 }
 
-void MainWindow::on_pushButton_5_clicked()
-{
-    QMessageBox msgBox;
-
-
-    if(communication.Connect())
-    {
-        msgBox.setText("Connected.");
-        msgBox.exec();
-    }
-    else
-    {
-        msgBox.setText("Connection failed.");
-        msgBox.exec();
-    }
-
-}
 
 void MainWindow::on_pushButton_6_clicked()
 {
@@ -98,11 +90,38 @@ void MainWindow::on_btStopSelectedMachine_clicked()
     Communication.send("Stop Everything!");
 
 }
-
-void MainWindow::on_listViewGarments_clicked(const QModelIndex &index)
+*/
+void MainWindow::on_listWidgetGarments_clicked(const QModelIndex &index)
 {
-    object = index.selected;
-    label.text = object.name;
-    label.text = object.Owner;
-    label.text = object.WashingProgram;
-}*/
+    //QListWidgetItem *object = ui->listWidgetGarments->currentItem();
+    QString objectName = ui->listWidgetGarments->currentItem()->text();
+    std::cout << objectName.toStdString();
+    //label.text = object.name;
+    //label.text = object.Owner;
+    //label.text = object.WashingProgram;
+}
+
+void MainWindow::on_btCallEmployee_clicked()
+{
+    QMessageBox msgBox;
+    msgBox.setText("Chris is onderweg");
+    msgBox.exec();
+}
+
+void MainWindow::addGarmentToListWidget(QString garmentId)
+{
+    ui->listWidgetGarments->addItem(garmentId);
+}
+
+void MainWindow::on_btAddGarmentTest_clicked()
+{
+    QString garmentId = "HalveGarenTrui";
+    ui->listWidgetGarments->addItem(garmentId);
+    //Garment garment = Garment(401, 40, "Wool", "Fuchsia");
+    //listViewGarments.add(garment);
+}
+
+void MainWindow::findObject(std::string idName)
+{
+
+}

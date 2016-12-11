@@ -11,6 +11,7 @@ public:
     bool WriteFirst();
     bool Write();
     void Read();
+    void Close();
 };
 
 #endif // COMMUNICATION_H

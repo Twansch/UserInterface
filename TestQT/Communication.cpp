@@ -44,6 +44,7 @@ bool Communication::Connect()
     if(socketfd < 0)
     {
         std::cout << "error opening socket\n";
+        return false;
     }
     //server = gethostbyname(//??);
 
@@ -109,4 +110,9 @@ void Communication::Read()
     {
         std::cout << n;
     }
+}
+
+void Communication::Close()
+{
+    close(socketfd);
 }

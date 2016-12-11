@@ -266,7 +266,7 @@
       <property name="title">
        <string>Garments</string>
       </property>
-      <widget class="QListView" name="listViewGarments">
+      <widget class="QListWidget" name="listWidgetGarments">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -274,6 +274,19 @@
          <width>331</width>
          <height>192</height>
         </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btAddGarmentTest">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>150</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
        </property>
       </widget>
      </widget>

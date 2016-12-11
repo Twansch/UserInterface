@@ -1,15 +1,3 @@
-Garment.cpp
-Details
-Activiteit
-VORIGE MAAND
-
-Chris Wegter heeft een item geüpload
-Computer • 11 dec. 2016
-C++
-Garment.cpp
-Geen activiteiten geregistreerd vóór 11 december 2016
-Nieuwe Team Drive
-
 #include "Garment.h"
 
 Garment::Garment(int id, double weight, std::string material, std::string color) 

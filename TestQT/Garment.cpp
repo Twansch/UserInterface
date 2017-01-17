@@ -1,5 +1,74 @@
+Garment.cpp
+Details
+Activiteit
+VORIGE MAAND
+
+Chris Wegter heeft een item geüpload
+Computer • 11 dec. 2016
+C++
+Garment.cpp
+Geen activiteiten geregistreerd vóór 11 december 2016
+Nieuwe Team Drive
+
 #include "Garment.h"
 
-//Garment::Garment()
-//{
-//}
+Garment::Garment(int id, double weight, std::string material, std::string color) 
+: id(id)
+, weight(weight)
+, material(material)
+, color(color)
+, dryer(false)
+, steamer(false)
+, centrifuge(false)
+{
+}
+
+void Garment::SetDryer(bool dryer)
+{
+	this->dryer = dryer;
+}
+
+void Garment::SetSteamer(bool steamer)
+{
+	this->steamer = steamer;
+}
+
+void Garment::SetCentrifuge(bool centrifuge)
+{
+	this->centrifuge = centrifuge;
+}
+
+int Garment::GetId() const
+{
+	return id;
+}
+
+double Garment::GetWeight() const
+{
+	return weight;
+}
+
+std::string Garment::GetMaterial() const
+{
+	return material;
+}
+
+std::string Garment::GetColor() const
+{
+	return color;
+}
+
+bool Garment::GetDryer() const
+{
+	return dryer;
+}
+
+bool Garment::GetSteamer() const
+{
+	return steamer;
+}
+
+bool Garment::GetCentrifuge() const
+{
+	return centrifuge;
+}
